@@ -12,11 +12,6 @@ const Home = () => {
             </Head>
             <AppLayout>
                 <div>Hello, Next!
-                    <ul>
-                        <li>
-                            <Link href="/about"><a>about</a></Link>
-                        </li>
-                    </ul>
                 </div>
             </AppLayout>
         </>
