@@ -1,14 +1,15 @@
 import React from 'react';
-import { Menu, Input, Button, Row, Col, Card, Avatar, Form } from 'antd';
+import { Menu, Input, Row, Col, Card, Avatar } from 'antd';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import LoginForm from './LoginForm';
 
 const dummy = {
     nickname: '표호근',
-    Post: [],
+    Post: [], 
     Followings: [],
     Followers: [],
-    isLoggedIn: true,
+    isLoggedIn: false,
 };
 
 const AppLayout = ({children}) => {
@@ -40,20 +41,7 @@ const AppLayout = ({children}) => {
                                 />
                             </Card>
                                 :
-                            <Form>
-                                <div>
-                                    <label htmlFor="user-id">아이디</label>
-                                    <br />
-                                    <Input name="user-id" required />
-                                </div>
-                                <div>
-                                    <label htmlFor="user-password">비밀번호</label>
-                                    <br />
-                                    <Input name="user-password" type="password" required />
-                                </div>
-                                <Button type="primary" htmlType="submit" loading={false}>로그인</Button>
-                                <Link href="/signup"><a><Button>회원가입</Button></a></Link>
-                            </Form>
+                            <LoginForm />
                         }
                     </Col>
                     <Col xs={24} md={12}>
